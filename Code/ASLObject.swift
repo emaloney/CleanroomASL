@@ -18,9 +18,9 @@ public extension asl_object_t
     Allows ASL object attributes to be retrieved and set via the subscripting
     notation.
 
-    :param:     key The attribute key.
+    - parameter     key: The attribute key.
     
-    :returns:   The value associated with `key`, or `nil` if there isn't one.
+    - returns:   The value associated with `key`, or `nil` if there isn't one.
     */
     public subscript(key: ASLAttributeKey)
         -> String?
@@ -46,9 +46,9 @@ public extension asl_object_t
     Allows the keys of the attributes contained in an ASL message to retrieved 
     using the attribute's index.
 
-    :param:     index The (zero-based) attribute index.
+    - parameter     index: The (zero-based) attribute index.
     
-    :returns:   The key associated with the attribute at `index`, or `nil` if
+    - returns:   The key associated with the attribute at `index`, or `nil` if
                 `index` is greater than the number of attributes.
     */
     public subscript(index: UInt32)
@@ -64,7 +64,7 @@ public extension asl_object_t
     /**
     Counts the number of ASL object attributes contained by the receiver.
     
-    :returns:   The number of attributes.
+    - returns:   The number of attributes.
     */
     public func countAttributes()
         -> UInt32
@@ -118,7 +118,7 @@ public class ASLObject
         Creates a new `asl_object_t` for the `ASL_TYPE` represented by
         the receiver.
         
-        :returns:   The new `asl_object_t`.
+        - returns:   The new `asl_object_t`.
         */
         public func create()
             -> asl_object_t
@@ -142,7 +142,7 @@ public class ASLObject
     /**
     Initializes a new `ASLObject` instance to represent the given `ASLType`.
     
-    :param:     type The `ASLType` that determines the
+    - parameter     type: The `ASLType` that determines the
     */
     private init(type: ASLType)
     {
@@ -158,9 +158,9 @@ public class ASLObject
     Allows ASL object attributes to be retrieved and set via the subscripting
     notation.
     
-    :param:     key The attribute key.
+    - parameter     key: The attribute key.
     
-    :returns:   The value associated with `key`, or `nil` if there isn't one.
+    - returns:   The value associated with `key`, or `nil` if there isn't one.
     */
     public subscript(key: ASLAttributeKey)
         -> String?
@@ -174,9 +174,9 @@ public class ASLObject
     Allows the keys of ASL object attributes to retrieved using the attribute's
     index.
 
-    :param:     index The (zero-based) attribute index.
+    - parameter     index: The (zero-based) attribute index.
     
-    :returns:   The key associated with the attribute at `index`, or `nil` if
+    - returns:   The key associated with the attribute at `index`, or `nil` if
                 `index` is greater than the number of attributes.
     */
     public subscript(index: UInt32)
@@ -188,7 +188,7 @@ public class ASLObject
     /**
     Counts the number of ASL object attributes contained by the receiver.
     
-    :returns:   The number of attributes.
+    - returns:   The number of attributes.
     */
     public func countAttributes()
         -> UInt32
@@ -216,10 +216,10 @@ public final class ASLMessageObject: ASLObject
     Initializes an `ASLMessageObject` having the specified priority level
     and message.
     
-    :param:     priorityLevel The `ASLPriorityLevel` to use for the message
+    - parameter     priorityLevel: The `ASLPriorityLevel` to use for the message
                 being constructed.
     
-    :param:     message The content of the message itself.
+    - parameter     message: The content of the message itself.
     */
     public init(priorityLevel: ASLPriorityLevel, message: String)
     {
@@ -297,7 +297,7 @@ public final class ASLQueryObject: ASLObject
         Initializes a new `ASLQueryObject.OperationModifiers` value with the
         specified raw value.
 
-        :param:     rawValue A `UInt32` value containing the raw bit flag
+        - parameter     rawValue: A `UInt32` value containing the raw bit flag
                     values to use.
         */
         public init(_ rawValue: UInt32) { value = rawValue }
@@ -306,7 +306,7 @@ public final class ASLQueryObject: ASLObject
         Initializes a new `ASLQueryObject.OperationModifiers` value with the
         specified raw value.
 
-        :param:     rawValue A `UInt32` value containing the raw bit flag
+        - parameter     rawValue: A `UInt32` value containing the raw bit flag
                     values to use.
         */
         public init(rawValue: UInt32) { value = rawValue }
@@ -414,15 +414,15 @@ public final class ASLQueryObject: ASLObject
     When a search query is executed, the result set will be constrained
     according to the query key(s) that have been set on the receiver.
     
-    :param:     key An `ASLAttributeKey` specifying the key whose value will
+    - parameter     key: An `ASLAttributeKey` specifying the key whose value will
                 be queried.
     
-    :param:     value The string value to find.
+    - parameter     value: The string value to find.
     
-    :param:     operation Specifies the query `Operation` to be performed. This
+    - parameter     operation: Specifies the query `Operation` to be performed. This
                 governs how values will be matched by the search.
     
-    :param:     modifiers The `OperationModifiers` bit flags that modify the
+    - parameter     modifiers: The `OperationModifiers` bit flags that modify the
                 behavior of the search operation.
     */
     public func setQueryKey(key: ASLAttributeKey, value: String?, operation: Operation, modifiers: OperationModifiers)
@@ -436,15 +436,15 @@ public final class ASLQueryObject: ASLObject
     When a search query is executed, the result set will be constrained
     according to the query key(s) that have been set on the receiver.
     
-    :param:     key An `ASLAttributeKey` specifying the key whose value will
+    - parameter     key: An `ASLAttributeKey` specifying the key whose value will
                 be queried.
     
-    :param:     value The integer value to find.
+    - parameter     value: The integer value to find.
     
-    :param:     operation Specifies the query `Operation` to be performed. This
+    - parameter     operation: Specifies the query `Operation` to be performed. This
                 governs how values will be matched by the search.
     
-    :param:     modifiers The `OperationModifiers` bit flags that modify the
+    - parameter     modifiers: The `OperationModifiers` bit flags that modify the
                 behavior of the search operation. Note that using this method
                 variant automatically causes the `.MatchNumeric` bit flag to
                 be set.

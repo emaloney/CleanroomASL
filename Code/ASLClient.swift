@@ -39,7 +39,7 @@ public class ASLClient
         Initializes a new `ASLClient.Options` value with the specified
         raw value.
         
-        :param:     rawValue A `UInt32` value containing the raw bit flag
+        - parameter     rawValue: A `UInt32` value containing the raw bit flag
                     values to use.
         */
         public init(_ rawValue: UInt32) { value = rawValue }
@@ -48,7 +48,7 @@ public class ASLClient
         Initializes a new `ASLClient.Options` value with the specified
         raw value.
         
-        :param:     rawValue A `UInt32` value containing the raw bit flag
+        - parameter     rawValue: A `UInt32` value containing the raw bit flag
                     values to use.
         */
         public init(rawValue: UInt32) { value = rawValue }
@@ -112,24 +112,24 @@ public class ASLClient
     /**
     Initializes a new `ASLClient` instance.
     
-    :param:     sender Will be used as the `ASLAttributeKey` value for the
+    - parameter     sender: Will be used as the `ASLAttributeKey` value for the
                 `.Sender` key for all log messages sent to ASL. If `nil`, ASL
                 will use the process name.
     
-    :param:     facility Will be used as the `ASLAttributeKey` value for the
+    - parameter     facility: Will be used as the `ASLAttributeKey` value for the
                 `.Facility` key for all log messages sent to ASL. If `nil`, ASL
                 will select a default.
     
-    :param:     filterMask Specifies the priority filter that should be applied
+    - parameter     filterMask: Specifies the priority filter that should be applied
                 to messages sent to the log.
     
-    :param:     useRawStdErr If `true`, messages sent through the `ASLClient`
+    - parameter     useRawStdErr: If `true`, messages sent through the `ASLClient`
                 will be mirrored to standard error without modification.
                 Note that this differs from the behavior of the `.StdErr`
                 value for the `ASLClient.Options` parameter, which performs
                 some escaping and may add additional text to the message.
 
-    :param:     options An `ASLClient.Options` value specifying the client
+    - parameter     options: An `ASLClient.Options` value specifying the client
                 options to be used by this new client. Note that if the
                 `.StdErr` value is passed and `rawStdErr` is also `true`,
                 the behavior of `rawStdErr` will be used, overriding the
@@ -162,7 +162,7 @@ public class ASLClient
         asl_close(client)
     }
 
-    private func dispatcher(_ currentQueue: dispatch_queue_t? = nil, synchronously: Bool = false)(block: dispatch_block_t)
+    private func dispatcher(currentQueue: dispatch_queue_t? = nil, synchronously: Bool = false)(block: dispatch_block_t)
     {
         let shouldDispatch = currentQueue == nil || self.queue != currentQueue!
         if shouldDispatch {
@@ -180,15 +180,15 @@ public class ASLClient
     /**
     Sends the message to the Apple System Log.
     
-    :param:     message the `ASLMessageObject` to send to Apple System Log.
+    - parameter     message: the `ASLMessageObject` to send to Apple System Log.
     
-    :param:     logSynchronously If `true`, the `log()` function will perform
+    - parameter     logSynchronously: If `true`, the `log()` function will perform
                 synchronously. You should **not** set this to `true` in
                 production code; it will degrade performance. Synchronous
                 logging can be useful when debugging to ensure that up-to-date
                 log messages are visible in the console.
     
-    :param:     currentQueue If the log message is already being processed on a
+    - parameter     currentQueue: If the log message is already being processed on a
                 given GCD queue, a reference to that queue should be passed in.
                 That way, if `currentQueue` has the same value as the receiver's 
                 `queue` property, no additional dispatching will take place. 
@@ -222,9 +222,9 @@ public class ASLClient
     Only entries that have a valid timestamp and message will be provided to
     the callback.
 
-    :param:     query The `ASLQueryObject` representing the search query to run.
+    - parameter     query: The `ASLQueryObject` representing the search query to run.
 
-    :param:     callback The callback function to be invoked for each log entry.
+    - parameter     callback: The callback function to be invoked for each log entry.
                 Make no assumptions about which thread will be calling the
                 function.
     */
@@ -239,11 +239,11 @@ public class ASLClient
             while record != nil && keepGoing {
                 if let message = record[.Message] {
                     if let timestampStr = record[.Time] {
-                        if let timestampInt = timestampStr.toInt() {
+                        if let timestampInt = Int(timestampStr) {
                             var timestamp = NSTimeInterval(timestampInt)
 
                             if let nanoStr = record[.TimeNanoSec] {
-                                if let nanoInt = nanoStr.toInt() {
+                                if let nanoInt = Int(nanoStr) {
                                     let nanos = Double(nanoInt) / Double(NSEC_PER_SEC)
                                     timestamp += nanos
                                 }
@@ -253,7 +253,7 @@ public class ASLClient
 
                             var priority = ASLPriorityLevel.Notice
                             if let logLevelStr = record[.Level],
-                                let logLevelInt = logLevelStr.toInt(),
+                                let logLevelInt = Int(logLevelStr),
                                 let level = ASLPriorityLevel(rawValue: Int32(logLevelInt))
                             {
                                 priority = level
