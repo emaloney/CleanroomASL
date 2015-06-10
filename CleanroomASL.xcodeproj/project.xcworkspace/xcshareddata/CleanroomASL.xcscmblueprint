@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D8B77186584699D3376BE96D8D99394FFE1062A4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F9CB73B84AAC4DF4FDAC59E7AE333891CE32959C" : 0,
+    "D8B77186584699D3376BE96D8D99394FFE1062A4" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DBAC6587-1C2F-40FA-A144-C4A00351A493",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F9CB73B84AAC4DF4FDAC59E7AE333891CE32959C" : "..",
+    "D8B77186584699D3376BE96D8D99394FFE1062A4" : "CleanroomASL\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CleanroomASL",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CleanroomASL.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/emaloney\/CleanroomASL.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D8B77186584699D3376BE96D8D99394FFE1062A4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rosskimes\/CleanroomLogger.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F9CB73B84AAC4DF4FDAC59E7AE333891CE32959C"
+    }
+  ]
+}
