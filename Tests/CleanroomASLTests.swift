@@ -28,7 +28,7 @@ class CleanroomASLTests: XCTestCase
         }
     }
 
-    func verifyTestMessages(client: ASLClient, sentSince date: NSDate)
+    func verifyTestMessages(client: ASLClient, sentSince date: Date)
     {
         let query = ASLQueryObject()
         query.setQuery(key: .sender, value: sender, operation: .equalTo, modifiers: .none)
@@ -79,7 +79,7 @@ class CleanroomASLTests: XCTestCase
 
     func testStandardLogging()
     {
-        let startTime = NSDate()
+        let startTime = Date()
 
         let client = ASLClient(sender: sender)
 
@@ -92,7 +92,7 @@ class CleanroomASLTests: XCTestCase
     {
         let filePath = "/tmp/\(sender)-\(ProcessInfo().globallyUniqueString)-test-data-store.asl"
 
-        let startTime = NSDate()
+        let startTime = Date()
 
         var client: ASLClient? = ASLClient(filePath: filePath, sender: sender, openFileForWriting: true)
 
