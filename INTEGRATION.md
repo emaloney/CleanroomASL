@@ -1,4 +1,4 @@
-![Gilt Tech logo](https://raw.githubusercontent.com/gilt/Cleanroom/xcode-8.2/Assets/gilt-tech-logo.png)
+![Gilt Tech logo](https://raw.githubusercontent.com/gilt/Cleanroom/master/Assets/gilt-tech-logo.png)
 
 # CleanroomASL Integration Notes
 
@@ -13,7 +13,7 @@ Macintosh|macOS 10.12|macOS 10.10
 Apple TV|tvOS 10.1|tvOS 9.0
 Apple Watch|watchOS 3.1|watchOS 2.0
 
-**This is the `xcode-8.2` branch of CleanroomASL.** It uses **Swift 3.0.2** and **requires Xcode 8.2** to compile.
+CleanroomASL uses **Swift 3.0.2** and **requires Xcode 8.2** to compile.
 
 ### Options for integration
 
@@ -36,12 +36,12 @@ Within to your project’s root directory, Carthage-based projects will store a 
 To integrate CleanroomASL in your workspace, you would start by adding the following line to the `Cartfile`:
 
 ```
-github "emaloney/CleanroomASL" ~> 2.0.0
+github "emaloney/CleanroomASL" ~> 2.1.0
 ```
 
-This specifies that Carthage use the latest version of CleanroomASL that is API-compatible with 2.0, i.e. any 2.0.*x* version.
+This specifies that Carthage use the latest version of CleanroomASL that is API-compatible with 2.1, i.e. any 2.1.*x* version.
 
-**Note:** Be sure to check the [latest releases](https://github.com/emaloney/CleanroomASL/releases); there may be a newer version than 2.0 that is no longer API-compatible.
+**Note:** Be sure to check the [latest releases](https://github.com/emaloney/CleanroomASL/releases); there may be a newer version than 2.1 that is no longer API-compatible.
 
 ### 2. Download CleanroomASL using Carthage
 
@@ -106,7 +106,7 @@ Select the appropriate Build Scheme for your Target, and press `⌘-B` to try to
 
 ### You're done!
 
-Once properly integrated, you can make use of [the API](https://rawgit.com/emaloney/CleanroomASL/xcode-8.2/Documentation/API/index.html) provided by CleanroomASL using the statement:
+Once properly integrated, you can make use of [the API](https://rawgit.com/emaloney/CleanroomASL/master/Documentation/API/index.html) provided by CleanroomASL using the statement:
 
 ```swift
 import CleanroomASL
@@ -161,7 +161,7 @@ Select the appropriate Build Scheme for your Target, and press `⌘-B` to try to
 
 ### You're done!
 
-Once properly integrated, you can make use of [the API](https://rawgit.com/emaloney/CleanroomASL/xcode-8.2/Documentation/API/index.html) provided by CleanroomASL using the statement:
+Once properly integrated, you can make use of [the API](https://rawgit.com/emaloney/CleanroomASL/master/Documentation/API/index.html) provided by CleanroomASL using the statement:
 
 ```swift
 import CleanroomASL
@@ -169,6 +169,6 @@ import CleanroomASL
 
 ## Further Reading
 
-Want to learn more about CleanroomASL? Check out [the README](https://github.com/emaloney/CleanroomASL/blob/xcode-8.2/README.md) or [the API documentation](https://rawgit.com/emaloney/CleanroomASL/xcode-8.2/Documentation/API/index.html).
+Want to learn more about CleanroomASL? Check out [the README](https://github.com/emaloney/CleanroomASL/blob/master/README.md) or [the API documentation](https://rawgit.com/emaloney/CleanroomASL/master/Documentation/API/index.html).
 
 **_Happy coding!_**
