@@ -1,12 +1,16 @@
+![HBC Digital logo](https://raw.githubusercontent.com/gilt/Cleanroom/master/Assets/hbc-digital-logo.png)     
 ![Gilt Tech logo](https://raw.githubusercontent.com/gilt/Cleanroom/master/Assets/gilt-tech-logo.png)
 
-# Notice: CleanroomASL is deprecated
+# CleanroomASL
+![Deprecation notice](https://raw.githubusercontent.com/gilt/Cleanroom/master/Assets/deprecated-banner.png)
+
+### Notice: CleanroomASL is no longer supported
 
 __*The Apple System Log facility has been deprecated by Apple.*__
 	
 As a result, we've deprecated CleanroomASL as well. Beyond critical maintenance fixes, we will no longer be actively developing the CleanroomASL project.
 
-# CleanroomASL
+---
 
 CleanroomASL is an iOS framework providing a Swift-based API for writing to and reading from [the Apple System Log (ASL) facility](#about-the-apple-system-log).
 
