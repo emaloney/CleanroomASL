@@ -28,7 +28,7 @@ This is the `master` branch. It uses **Swift 3.0.2** and **requires Xcode 8.2** 
 
 Branch|Build status
 --------|------------------------
-[`master`](https://github.com/emaloney/CleanroomASL)|[![Build status: master branch](https://travis-ci.org/emaloney/CleanroomASL.svg?branch=master)](https://travis-ci.org/emaloney/CleanroomASL)
+[`master`](https://github.com/gilt/CleanroomASL)|[![Build status: master branch](https://travis-ci.org/gilt/CleanroomASL.svg?branch=master)](https://travis-ci.org/gilt/CleanroomASL)
 
 
 #### Who It’s For
@@ -48,7 +48,7 @@ CleanroomLogger is also extensible, allowing you to multiplex log output to mult
 
 ### License
 
-CleanroomASL is distributed under [the MIT license](https://github.com/emaloney/CleanroomASL/blob/master/LICENSE).
+CleanroomASL is distributed under [the MIT license](https://github.com/gilt/CleanroomASL/blob/master/LICENSE).
 
 CleanroomASL is provided for your use—free-of-charge—on an as-is basis. We make no guarantees, promises or apologies. *Caveat developer.*
 
@@ -62,12 +62,12 @@ The simplest way to integrate CleanroomASL is with the [Carthage](https://github
 First, add this line to your [`Cartfile`](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):
 
 ```
-github "emaloney/CleanroomASL" ~> 2.1.0
+github "gilt/CleanroomASL" ~> 2.1.0
 ```
 
 Then, use the `carthage` command to [update your dependencies](https://github.com/Carthage/Carthage#upgrading-frameworks).
 
-Finally, you’ll need to [integrate CleanroomASL into your project](https://github.com/emaloney/CleanroomASL/blob/master/INTEGRATION.md) in order to use [the API](https://rawgit.com/emaloney/CleanroomASL/master/Documentation/API/index.html) it provides.
+Finally, you’ll need to [integrate CleanroomASL into your project](https://github.com/gilt/CleanroomASL/blob/master/INTEGRATION.md) in order to use [the API](https://rawgit.com/gilt/CleanroomASL/master/Documentation/API/index.html) it provides.
 
 Once successfully integrated, just add the following `import` statement to any Swift file where you want to use CleanroomASL:
 
@@ -75,7 +75,7 @@ Once successfully integrated, just add the following `import` statement to any S
 import CleanroomASL
 ```
 
-See [the Integration document](https://github.com/emaloney/CleanroomASL/blob/master/INTEGRATION.md) for additional details on integrating CleanroomASL into your project.
+See [the Integration document](https://github.com/gilt/CleanroomASL/blob/master/INTEGRATION.md) for additional details on integrating CleanroomASL into your project.
 
 ## Using CleanroomASL
 
@@ -145,7 +145,7 @@ Using its return value, the callback can control whether subsequent records are 
 
 ### API documentation
 
-For detailed information on using CleanroomASL, [API documentation](https://rawgit.com/emaloney/CleanroomASL/master/Documentation/API/index.html) is available.
+For detailed information on using CleanroomASL, [API documentation](https://rawgit.com/gilt/CleanroomASL/master/Documentation/API/index.html) is available.
 
 
 ## About the Apple System Log
@@ -204,5 +204,5 @@ If you’d like to contribute to this or any other Cleanroom Project repo, pleas
 
 ### Acknowledgements
 
-[API documentation for CleanroomASL](https://rawgit.com/emaloney/CleanroomASL/master/Documentation/API/index.html) is generated using [Realm](http://realm.io)’s [jazzy](https://github.com/realm/jazzy/) project, maintained by [JP Simard](https://github.com/jpsim) and [Samuel E. Giddins](https://github.com/segiddins).
+[API documentation for CleanroomASL](https://rawgit.com/gilt/CleanroomASL/master/Documentation/API/index.html) is generated using [Realm](http://realm.io)’s [jazzy](https://github.com/realm/jazzy/) project, maintained by [JP Simard](https://github.com/jpsim) and [Samuel E. Giddins](https://github.com/segiddins).
 

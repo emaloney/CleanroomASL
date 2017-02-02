@@ -1,6 +1,6 @@
 <MBML>
 	<Var name="project:name" literal="CleanroomASL"/>
-	<Var name="repo:owner" literal="emaloney"/>
+	<Var name="repo:owner" literal="gilt"/>
 	<Var name="project:creator:name" literal="Evan Maloney"/>
 	<Var name="project:license" literal="MIT"/>
 	<Var name="project:bundlePrefix" literal="com.gilt.cleanroom"/>

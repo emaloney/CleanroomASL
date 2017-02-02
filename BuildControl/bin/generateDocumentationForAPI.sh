@@ -12,7 +12,7 @@ fi
 
 pushd "`dirname $0`/../.." > /dev/null
 
-PUBLIC_GITHUB_URL="https://github.com/emaloney/CleanroomASL"
+PUBLIC_GITHUB_URL="https://github.com/gilt/CleanroomASL"
 if [[ -z "$PUBLIC_GITHUB_URL" ]]; then
 	PUBLIC_GITHUB_URL=$(git remote -v | grep fetch | awk '{ print $2 }' | sed s/.git\$// | sed s/^ssh/https/ | sed s#git@github.com:#https://github.com/# )
 fi
