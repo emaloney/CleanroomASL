@@ -30,9 +30,11 @@
 		</Var>
 	</Var>
 
-	<Var name="platforms:active" value="xcode-8.2"/>
-	<Var name="platforms:build" value="$platforms[$platforms:active]"/>
-	<Var name="platforms:ci" value="$platforms[$platforms:active]"/>
+	<Var name="buildPlatform:default" literal="xcode-8.2"/>
+	<Var name="buildPlatform:active" type="dynamic" expression="^if(^matchesRegex($repo:branch|^^xcode-([0-9]+){1}(\.[0-9]+){1,2}^q($))|$repo:branch|$buildPlatform:default)"/>
+	<Var name="buildPlatform:supportsCI" type="dynamic" expression="^if($versions[$repo:branch][Travis]|1|0)"/>
+	<Var name="platforms:build" type="dynamic" expression="$platforms[$buildPlatform:active]"/>
+	<Var name="platforms:ci" type="dynamic" expression="$platforms[$buildPlatform:active]"/>
 
 	<Var name="branches" type="list">
 		<Var literal="master"/>
