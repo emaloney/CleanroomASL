@@ -69,7 +69,7 @@ Then, use the `carthage` command to [update your dependencies](https://github.co
 
 Finally, you’ll need to [integrate CleanroomASL into your project](https://github.com/gilt/CleanroomASL/blob/master/INTEGRATION.md) in order to use [the API](https://rawgit.com/gilt/CleanroomASL/master/Documentation/API/index.html) it provides.
 
-Once successfully integrated, just add the following `import` statement to any Swift file where you want to use CleanroomASL:
+Once successfully integrated, just add the following statement to any Swift file where you want to use CleanroomASL:
 
 ```swift
 import CleanroomASL
@@ -142,7 +142,6 @@ Using its return value, the callback can control whether subsequent records are 
 > Once `nil` is passed to the callback or the callback returns `false`, the callback will not be executed again for the given search operation.
 
 
-
 ### API documentation
 
 For detailed information on using CleanroomASL, [API documentation](https://rawgit.com/gilt/CleanroomASL/master/Documentation/API/index.html) is available.
@@ -204,5 +203,4 @@ If you’d like to contribute to this or any other Cleanroom Project repo, pleas
 
 ### Acknowledgements
 
-[API documentation for CleanroomASL](https://rawgit.com/gilt/CleanroomASL/master/Documentation/API/index.html) is generated using [Realm](http://realm.io)’s [jazzy](https://github.com/realm/jazzy/) project, maintained by [JP Simard](https://github.com/jpsim) and [Samuel E. Giddins](https://github.com/segiddins).
-
+API documentation is generated using [Realm](http://realm.io)’s [jazzy](https://github.com/realm/jazzy/) project, maintained by [JP Simard](https://github.com/jpsim) and [Samuel E. Giddins](https://github.com/segiddins).

@@ -1,9 +1,12 @@
 <MBML>
 	<Var name="project:name" literal="CleanroomASL"/>
+	<Var name="project:publisher" literal="Gilt Groupe"/>
 	<Var name="repo:owner" literal="gilt"/>
 	<Var name="project:creator:name" literal="Evan Maloney"/>
 	<Var name="project:license" literal="MIT"/>
 	<Var name="project:bundlePrefix" literal="com.gilt.cleanroom"/>
+	<Var name="project:language" literal="Swift"/>
+	<Var name="project:grouping" literal="Cleanroom"/>
 	<Var name="project:deprecationNotice">__*The Apple System Log facility has been deprecated by Apple.*__
 	
 As a result, we've deprecated CleanroomASL as well. Beyond critical maintenance fixes, we will no longer be actively developing the CleanroomASL project.</Var>

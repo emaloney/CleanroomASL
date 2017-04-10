@@ -1,16 +1,19 @@
 language: objective-c
 xcode_project: CleanroomASL.xcodeproj
-osx_image: xcode8.2
+osx_image: xcode8.3
 
 git:
   depth: 1
   submodules: false
 
 before_install:
+  - sudo systemsetup -settimezone America/New_York					# temporary hack: NYC timezone is required for some MBDataEnvironment date-related unit tests
   - git submodule update --init
 
 install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+  - rm -rf ~/Library/Developer/CoreSimulator					  	# these two lines are a hack around a recurring Travis problem: multiple versions of the
+  - sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService	# same simulator: https://github.com/travis-ci/travis-ci/issues/7580#issuecomment-292974395
 
 script:
   - ./BuildControl/bin/travisBuildHelper.sh build iOS
