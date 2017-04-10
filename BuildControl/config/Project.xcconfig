@@ -13,14 +13,13 @@ VALID_ARCHS[sdk=iphonesimulator*] = i386 x86_64
 LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*] =  @executable_path/Frameworks @loader_path/Frameworks
 LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*] =  @executable_path/Frameworks @loader_path/Frameworks
 
-ENABLE_BITCODE[sdk=iphonesimulator*] = YES
 ENABLE_BITCODE[sdk=iphone*] = YES
 
 ////////////////////////////////////////////////////////////////////////////////
 //
 // macOS-specific settings
 //
-MACOSX_DEPLOYMENT_TARGET = 10.10
+MACOSX_DEPLOYMENT_TARGET = 10.11
 
 VALID_ARCHS[sdk=macosx*] = i386 x86_64
 
@@ -40,7 +39,6 @@ VALID_ARCHS[sdk=appletvsimulator*] = x86_64
 LD_RUNPATH_SEARCH_PATHS[sdk=appletvos*] =  @executable_path/Frameworks @loader_path/Frameworks
 LD_RUNPATH_SEARCH_PATHS[sdk=appletvsimulator*] =  @executable_path/Frameworks @loader_path/Frameworks
 
-ENABLE_BITCODE[sdk=appletvsimulator*] = YES
 ENABLE_BITCODE[sdk=appletv*] = YES
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -55,5 +53,4 @@ VALID_ARCHS[sdk=watchsimulator*] = i386
 LD_RUNPATH_SEARCH_PATHS[sdk=watchos*] =  @executable_path/Frameworks @loader_path/Frameworks
 LD_RUNPATH_SEARCH_PATHS[sdk=watchsimulator*] =  @executable_path/Frameworks @loader_path/Frameworks
 
-ENABLE_BITCODE[sdk=watchsimulator*] = YES
 ENABLE_BITCODE[sdk=watch*] = YES
